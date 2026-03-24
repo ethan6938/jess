@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>For Amy ❤️</title>
+
+<style>
+  body {
+    margin: 0;
+    font-family: 'Georgia', serif;
+    background: linear-gradient(135deg, #ff758c, #ff7eb3, #ffb199);
+    color: white;
+    text-align: center;
+    overflow-x: hidden;
+  }
+
+  h1 {
+    font-size: 3em;
+    margin-top: 30px;
+  }
+
+  /* BIG LOVE TEXT */
+  .love-text {
+    font-size: 4em;
+    font-weight: bold;
+    margin: 40px 20px;
+    color: #fff;
+    text-shadow:
+      0 0 10px #fff,
+      0 0 20px #ff4da6,
+      0 0 40px #ff4da6,
+      0 0 60px #ff1a75;
+    animation: glowPulse 2s infinite alternate;
+  }
+
+  @keyframes glowPulse {
+    from {
+      text-shadow:
+        0 0 10px #fff,
+        0 0 20px #ff4da6,
+        0 0 40px #ff4da6;
+      transform: scale(1);
+    }
+    to {
+      text-shadow:
+        0 0 20px #fff,
+        0 0 30px #ff66b2,
+        0 0 60px #ff1a75;
+      transform: scale(1.05);
+    }
+  }
+
+  /* shimmer effect */
+  .love-text span {
+    background: linear-gradient(90deg, #fff, #ffd6eb, #fff);
+    background-size: 200%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: shimmer 3s infinite;
+  }
+
+  @keyframes shimmer {
+    0% { background-position: -200%; }
+    100% { background-position: 200%; }
+  }
+
+  .container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+  }
+
+  .message-box {
+    background: rgba(255, 255, 255, 0.15);
+    margin: 20px 0;
+    padding: 25px;
+    border-radius: 20px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 0 20px rgba(255,255,255,0.2);
+    font-size: 1.3em;
+    line-height: 1.7;
+    animation: fadeInUp 1.5s ease forwards;
+  }
+
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(40px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  /* Floating hearts */
+  .heart {
+    position: fixed;
+    bottom: -10px;
+    color: rgba(255,255,255,0.8);
+    animation: floatUp linear infinite;
+  }
+
+  @keyframes floatUp {
+    0% {
+      transform: translateY(0) scale(1);
+      opacity: 1;
+    }
+    100% {
+      transform: translateY(-110vh) scale(1.5);
+      opacity: 0;
+    }
+  }
+</style>
+</head>
+
+<body>
+
+<h1>Amy, My Love ❤️</h1>
+
+<div class="love-text">
+  <span>I LOVE YOU AMY</span>
+</div>
+
+<div class="container">
+
+  <div class="message-box">
+    Amy… you came into my life and changed everything. You turned ordinary days into something magical just by being in them.
+  </div>
+
+  <div class="message-box">
+    I love your smile, your energy, your presence… everything about you feels like home to me.
+  </div>
+
+  <div class="message-box">
+    You are my peace when life gets loud, my happiness when I need it most, and my strength when I feel weak.
+  </div>
+
+  <div class="message-box">
+    Every moment I spend with you becomes a memory I never want to lose. You make time feel so special.
+  </div>
+
+  <div class="message-box">
+    Amy, I would choose you over and over again. In every lifetime, in every world… it will always be you.
+  </div>
+
+  <div class="message-box">
+    You’re not just someone I love… you’re the reason my heart feels full in a way I never knew was possible.
+  </div>
+
+  <div class="message-box">
+    I promise to stand by you, care for you, and love you in ways that words can’t fully explain.
+  </div>
+
+  <div class="message-box">
+    Forever with you doesn’t feel like enough… but it’s everything I will always want. I love you endlessly, Amy. 💖
+  </div>
+
+</div>
+
+<script>
+  function createHeart() {
+    const heart = document.createElement("div");
+    heart.classList.add("heart");
+    heart.innerHTML = "❤";
+
+    heart.style.left = Math.random() * 100 + "vw";
+    heart.style.fontSize = (Math.random() * 25 + 10) + "px";
+    heart.style.animationDuration = (Math.random() * 4 + 3) + "s";
+
+    document.body.appendChild(heart);
+
+    setTimeout(() => {
+      heart.remove();
+    }, 7000);
+  }
+
+  setInterval(createHeart, 120); // EXTRA hearts 💕
+</script>
+
+</body>
+</html>
